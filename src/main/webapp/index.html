@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://www.w3.org/WAI/content-assets/wai-aria-practices/patterns/table/examples/css/sortable-table.css">
+</head>
+<body>
+<h1>Transactions</h1>
+
+<div class="table-wrap">
+    <table class="sortable" id="transaction-table">
+        <caption>
+            Registered transactions - Press next or previous button to view other txn. <BR><BR>
+            <span class="sr-only">, column headers with buttons are sortable.</span>
+        </caption>
+        <thead>
+        <tr>
+            <th aria-sort="descending">
+                <button data-sort="id">
+                    ID
+                    <span aria-hidden="true"></span>
+                </button>
+            </th>
+            <th aria-sort="descending">
+                <button data-sort="sender">
+                    Sender
+                    <span aria-hidden="true"></span>
+                </button>
+            </th>
+            <th aria-sort="descending">
+                <button data-sort="receiver">
+                    Receiver
+                    <span aria-hidden="true"></span>
+                </button>
+            </th>
+            <th class="num" aria-sort="descending">
+                <button data-sort="totalAmount">
+                    Total Amount
+                    <span aria-hidden="true"></span>
+                </button>
+            </th>
+            <th class="no-sort">Total Paid Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="5"><i>Loading...</i></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<button id="prevButton">Previous</button>
+<button id="nextButton">Next</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="index.js"></script>
+</body>
+</html>
